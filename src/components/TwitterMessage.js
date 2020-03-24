@@ -9,8 +9,8 @@ class TwitterMessage extends React.Component {
     };
   }
 
-  handleInput =e => {
-    this.state({
+  handleInput = (e) => {
+    this.setState({
       message: e.target.value
     })
   }
@@ -20,7 +20,7 @@ class TwitterMessage extends React.Component {
     return (
       <div>
         <strong>Your message:</strong>
-        <input type="text" value={this.state.message}  onChange={this.handleInput} />
+        <input type='text' name='message' id='message' value={this.state.message}  onChange={(event) => this.handleInput(event)} />
         {charRemain}
       </div>
     );
